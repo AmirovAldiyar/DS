@@ -56,6 +56,6 @@ CREATE TABLE "has"(
 
 CREATE TABLE "voices"(
 	"person_id" int, 
-	"quote_id" int, 
-)
+	"quote_id" int
+);
 
