@@ -1,0 +1,69 @@
+Table "movie" {
+  "id" int
+  "plot_outline" varchar
+  "length" int
+  "year" timestamp
+  "title" varchar
+  "company" int
+
+Indexes {
+  (id, year, title) [pk]
+}
+}
+
+Table "production_company" {
+  "name" varchar
+  "address" varchar
+  "id" int
+
+Indexes {
+  (name, address, id) [pk]
+}
+}
+
+Table "genre" {
+  "id" int [pk]
+  "name" varchar
+}
+
+Table "person" {
+  "id" int
+  "name" varchar
+  "bday" timestamp
+
+Indexes {
+  (id, name, bday) [pk]
+}
+}
+
+Table "quote" {
+  "text" varchar
+  "quote_id" int [pk]
+}
+
+Table "action" {
+  "role" varchar
+  "person_id" int
+  "movie_id" int
+  "id" int [pk]
+}
+
+Table "classifies_as" {
+  "movie_id" int
+  "genre_id" int
+}
+
+Table "procudes" {
+  "pc_id" int
+  "movie_id" int
+}
+
+Table "has" {
+  "movie_id" int
+  "quote_id" int
+}
+
+Table "voices" {
+  "person_id" int
+  "quote_id" int
+}
