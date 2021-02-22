@@ -1,0 +1,9 @@
+create_script.py - makes two tables 'student1' and 'student2' with 100k records
+create_indexes.py - adding two indexing on same column but different tables
+query_comparing.py - compares queries on two different tables but same column having different indexing methods.
+
+1.png - you can see the 'cost' for that query without any indexing method.
+2.png - you can see the difference between two indexing methods, hashing and b-tree respectively
+
+As you can see, b-tree works slightly better, but that difference could play major role in a bigger database.
+ 
